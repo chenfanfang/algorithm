@@ -23,6 +23,21 @@ struct ListNode *createNodeList(int nodeCount) {
     return headerNode;
 }
 
+//根据数组的值来创建链表
+struct ListNode *createNodeListWithValueArr(int valueArr[], int length) {
+    struct ListNode *headerNode = (struct ListNode *)malloc(sizeof(struct ListNode));
+    struct ListNode *flagNode = headerNode;
+    for (int i = 0; i < length; i++) {
+        struct ListNode *node = (struct ListNode *)malloc(sizeof(struct ListNode));
+        node->val = valueArr[i];
+        flagNode->next = node;
+        flagNode = node;
+    }
+    
+    flagNode->next = NULL;
+    return headerNode;
+}
+
 //打印链表里面的数据
 void printfNodeList(struct ListNode *headNode) {
     
@@ -35,4 +50,5 @@ void printfNodeList(struct ListNode *headNode) {
         listNode = listNode->next;
         
     }
+    printf("\n");
 }

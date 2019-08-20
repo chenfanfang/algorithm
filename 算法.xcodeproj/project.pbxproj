@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F66B5E81230BC83100826C1A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F66B5E80230BC83100826C1A /* main.c */; };
+		F66B5E85230BC84F00826C1A /* PublicTool.c in Sources */ = {isa = PBXBuildFile; fileRef = F6F67657230A80720015AFD1 /* PublicTool.c */; };
+		F66B5E8D230BDA4100826C1A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F66B5E8C230BDA4100826C1A /* main.c */; };
 		F6F67638230A40A60015AFD1 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F6F67637230A40A60015AFD1 /* main.c */; };
 		F6F67646230A40F50015AFD1 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F6F67645230A40F50015AFD1 /* main.c */; };
 		F6F67651230A80060015AFD1 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F6F67650230A80060015AFD1 /* main.c */; };
@@ -24,6 +27,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		F66B5E7C230BC83100826C1A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F66B5E88230BDA4100826C1A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		F6F67632230A40A60015AFD1 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,6 +111,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F66B5E7E230BC83100826C1A /* 148. 排序链表 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "148. 排序链表"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F66B5E80230BC83100826C1A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		F66B5E8A230BDA4100826C1A /* 20. 有效的括号 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "20. 有效的括号"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F66B5E8C230BDA4100826C1A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F6F67634230A40A60015AFD1 /* 算法 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "算法"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F67637230A40A60015AFD1 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F6F67643230A40F50015AFD1 /* 237. 删除链表中的节点 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "237. 删除链表中的节点"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +134,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F66B5E7B230BC83100826C1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F66B5E87230BDA4100826C1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F6F67631230A40A60015AFD1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -161,6 +200,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F66B5E7F230BC83100826C1A /* 148. 排序链表 */ = {
+			isa = PBXGroup;
+			children = (
+				F66B5E80230BC83100826C1A /* main.c */,
+			);
+			path = "148. 排序链表";
+			sourceTree = "<group>";
+		};
+		F66B5E8B230BDA4100826C1A /* 20. 有效的括号 */ = {
+			isa = PBXGroup;
+			children = (
+				F66B5E8C230BDA4100826C1A /* main.c */,
+			);
+			path = "20. 有效的括号";
+			sourceTree = "<group>";
+		};
 		F6F6762B230A40A60015AFD1 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +227,8 @@
 				F6F6766C230A98A00015AFD1 /* 203. 移除链表元素 */,
 				F6F67678230AA04A0015AFD1 /* 83. 删除排序链表中的重复元素 */,
 				F6F67684230AA55E0015AFD1 /* 876. 链表的中间结点 */,
+				F66B5E7F230BC83100826C1A /* 148. 排序链表 */,
+				F66B5E8B230BDA4100826C1A /* 20. 有效的括号 */,
 				F6F67635230A40A60015AFD1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -186,6 +243,8 @@
 				F6F6766B230A98A00015AFD1 /* 203. 移除链表元素 */,
 				F6F67677230AA04A0015AFD1 /* 83. 删除排序链表中的重复元素 */,
 				F6F67683230AA55E0015AFD1 /* 876. 链表的中间结点 */,
+				F66B5E7E230BC83100826C1A /* 148. 排序链表 */,
+				F66B5E8A230BDA4100826C1A /* 20. 有效的括号 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -258,6 +317,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F66B5E7D230BC83100826C1A /* 148. 排序链表 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F66B5E84230BC83100826C1A /* Build configuration list for PBXNativeTarget "148. 排序链表" */;
+			buildPhases = (
+				F66B5E7A230BC83100826C1A /* Sources */,
+				F66B5E7B230BC83100826C1A /* Frameworks */,
+				F66B5E7C230BC83100826C1A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "148. 排序链表";
+			productName = "148. 排序链表";
+			productReference = F66B5E7E230BC83100826C1A /* 148. 排序链表 */;
+			productType = "com.apple.product-type.tool";
+		};
+		F66B5E89230BDA4100826C1A /* 20. 有效的括号 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F66B5E8E230BDA4100826C1A /* Build configuration list for PBXNativeTarget "20. 有效的括号" */;
+			buildPhases = (
+				F66B5E86230BDA4100826C1A /* Sources */,
+				F66B5E87230BDA4100826C1A /* Frameworks */,
+				F66B5E88230BDA4100826C1A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "20. 有效的括号";
+			productName = "20. 有效的括号";
+			productReference = F66B5E8A230BDA4100826C1A /* 20. 有效的括号 */;
+			productType = "com.apple.product-type.tool";
+		};
 		F6F67633230A40A60015AFD1 /* 算法 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6F6763B230A40A60015AFD1 /* Build configuration list for PBXNativeTarget "算法" */;
@@ -386,6 +479,12 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = chenfanfang;
 				TargetAttributes = {
+					F66B5E7D230BC83100826C1A = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					F66B5E89230BDA4100826C1A = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					F6F67633230A40A60015AFD1 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -428,11 +527,30 @@
 				F6F6766A230A98A00015AFD1 /* 203. 移除链表元素 */,
 				F6F67676230AA04A0015AFD1 /* 83. 删除排序链表中的重复元素 */,
 				F6F67682230AA55E0015AFD1 /* 876. 链表的中间结点 */,
+				F66B5E7D230BC83100826C1A /* 148. 排序链表 */,
+				F66B5E89230BDA4100826C1A /* 20. 有效的括号 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F66B5E7A230BC83100826C1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F66B5E85230BC84F00826C1A /* PublicTool.c in Sources */,
+				F66B5E81230BC83100826C1A /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F66B5E86230BDA4100826C1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F66B5E8D230BDA4100826C1A /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F6F67630230A40A60015AFD1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -499,6 +617,42 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		F66B5E82230BC83100826C1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58B485HG52;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F66B5E83230BC83100826C1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58B485HG52;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F66B5E8F230BDA4100826C1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58B485HG52;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F66B5E90230BDA4100826C1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58B485HG52;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		F6F67639230A40A60015AFD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -739,6 +893,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F66B5E84230BC83100826C1A /* Build configuration list for PBXNativeTarget "148. 排序链表" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F66B5E82230BC83100826C1A /* Debug */,
+				F66B5E83230BC83100826C1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F66B5E8E230BDA4100826C1A /* Build configuration list for PBXNativeTarget "20. 有效的括号" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F66B5E8F230BDA4100826C1A /* Debug */,
+				F66B5E90230BDA4100826C1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F6F6762F230A40A60015AFD1 /* Build configuration list for PBXProject "算法" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
