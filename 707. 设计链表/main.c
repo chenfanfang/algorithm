@@ -119,25 +119,30 @@ void myLinkedListAddAtIndex(MyLinkedList* obj, int index, int val) {
     if (index < 0) return;
     
     Node *node = obj->head;
+    int index_flag = 0;
     if (node == NULL) {
         return;
     }
+    Node *new_node = createNode(val);
     if (node->next == NULL) {
-        Node *new_index_node = createNode(val);
-        
+        obj->head = new_node;
+        new_node->next = node;
+        return;
     }
     
-    for (int i = 1; i <= index - 1; i++) { //找到要插入坐标的上一个坐标的node
+    Node *previousNode = NULL;
+    while (index_flag != index) {
+        previousNode = node;
+        index_flag++;
         node = node->next;
-        if (node == NULL || node->next == NULL) {
+        if (node == NULL) {
             return;
         }
     }
     
-    Node *old_index_node = node->next;
-    Node *new_index_node = createNode(val);
-    node->next = new_index_node;
-    new_index_node->next = old_index_node;
+    previousNode->next = new_node;
+    new_node->next = node;
+    
     
 }
 
