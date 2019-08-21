@@ -200,6 +200,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F631B6FC230CE20D00DE39DD /* 链表 */ = {
+			isa = PBXGroup;
+			children = (
+				F6F67644230A40F50015AFD1 /* 237. 删除链表中的节点 */,
+				F6F6764F230A80060015AFD1 /* 206. 反转链表 */,
+				F6F67660230A929D0015AFD1 /* 141. 环形链表 */,
+				F6F6766C230A98A00015AFD1 /* 203. 移除链表元素 */,
+				F6F67678230AA04A0015AFD1 /* 83. 删除排序链表中的重复元素 */,
+				F6F67684230AA55E0015AFD1 /* 876. 链表的中间结点 */,
+				F66B5E7F230BC83100826C1A /* 148. 排序链表 */,
+			);
+			path = "链表";
+			sourceTree = "<group>";
+		};
 		F66B5E7F230BC83100826C1A /* 148. 排序链表 */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,15 +233,9 @@
 		F6F6762B230A40A60015AFD1 = {
 			isa = PBXGroup;
 			children = (
+				F6F67636230A40A60015AFD1 /* main */,
 				F6F67655230A80500015AFD1 /* PublicTool */,
-				F6F67636230A40A60015AFD1 /* 算法 */,
-				F6F67644230A40F50015AFD1 /* 237. 删除链表中的节点 */,
-				F6F6764F230A80060015AFD1 /* 206. 反转链表 */,
-				F6F67660230A929D0015AFD1 /* 141. 环形链表 */,
-				F6F6766C230A98A00015AFD1 /* 203. 移除链表元素 */,
-				F6F67678230AA04A0015AFD1 /* 83. 删除排序链表中的重复元素 */,
-				F6F67684230AA55E0015AFD1 /* 876. 链表的中间结点 */,
-				F66B5E7F230BC83100826C1A /* 148. 排序链表 */,
+				F631B6FC230CE20D00DE39DD /* 链表 */,
 				F66B5E8B230BDA4100826C1A /* 20. 有效的括号 */,
 				F6F67635230A40A60015AFD1 /* Products */,
 			);
@@ -249,12 +257,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F6F67636230A40A60015AFD1 /* 算法 */ = {
+		F6F67636230A40A60015AFD1 /* main */ = {
 			isa = PBXGroup;
 			children = (
 				F6F67637230A40A60015AFD1 /* main.c */,
 			);
-			path = "算法";
+			path = main;
 			sourceTree = "<group>";
 		};
 		F6F67644230A40F50015AFD1 /* 237. 删除链表中的节点 */ = {
