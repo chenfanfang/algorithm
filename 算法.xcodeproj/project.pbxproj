@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F631B704230CE2CC00DE39DD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F631B703230CE2CC00DE39DD /* main.c */; };
+		F631B70F230CEE6000DE39DD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F631B70E230CEE6000DE39DD /* main.c */; };
+		F631B71A230D126C00DE39DD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F631B719230D126C00DE39DD /* main.c */; };
+		F631B725230D373A00DE39DD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F631B724230D373A00DE39DD /* main.c */; };
 		F66B5E81230BC83100826C1A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F66B5E80230BC83100826C1A /* main.c */; };
 		F66B5E85230BC84F00826C1A /* PublicTool.c in Sources */ = {isa = PBXBuildFile; fileRef = F6F67657230A80720015AFD1 /* PublicTool.c */; };
 		F66B5E8D230BDA4100826C1A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F66B5E8C230BDA4100826C1A /* main.c */; };
@@ -27,6 +31,42 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		F631B6FF230CE2CC00DE39DD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F631B70A230CEE6000DE39DD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F631B715230D126C00DE39DD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F631B720230D373A00DE39DD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		F66B5E7C230BC83100826C1A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -111,6 +151,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F631B701230CE2CC00DE39DD /* 856. 括号的分数 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "856. 括号的分数"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F631B703230CE2CC00DE39DD /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		F631B70C230CEE6000DE39DD /* 150. 逆波兰表达式求值 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "150. 逆波兰表达式求值"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F631B70E230CEE6000DE39DD /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		F631B717230D126C00DE39DD /* 224. 基本计算器 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "224. 基本计算器"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F631B719230D126C00DE39DD /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		F631B722230D373A00DE39DD /* 707. 设计链表 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "707. 设计链表"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F631B724230D373A00DE39DD /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F66B5E7E230BC83100826C1A /* 148. 排序链表 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "148. 排序链表"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66B5E80230BC83100826C1A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F66B5E8A230BDA4100826C1A /* 20. 有效的括号 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "20. 有效的括号"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +182,34 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F631B6FE230CE2CC00DE39DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F631B709230CEE6000DE39DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F631B714230D126C00DE39DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F631B71F230D373A00DE39DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F66B5E7B230BC83100826C1A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,6 +290,38 @@
 			path = "链表";
 			sourceTree = "<group>";
 		};
+		F631B702230CE2CC00DE39DD /* 856. 括号的分数 */ = {
+			isa = PBXGroup;
+			children = (
+				F631B703230CE2CC00DE39DD /* main.c */,
+			);
+			path = "856. 括号的分数";
+			sourceTree = "<group>";
+		};
+		F631B70D230CEE6000DE39DD /* 150. 逆波兰表达式求值 */ = {
+			isa = PBXGroup;
+			children = (
+				F631B70E230CEE6000DE39DD /* main.c */,
+			);
+			path = "150. 逆波兰表达式求值";
+			sourceTree = "<group>";
+		};
+		F631B718230D126C00DE39DD /* 224. 基本计算器 */ = {
+			isa = PBXGroup;
+			children = (
+				F631B719230D126C00DE39DD /* main.c */,
+			);
+			path = "224. 基本计算器";
+			sourceTree = "<group>";
+		};
+		F631B723230D373A00DE39DD /* 707. 设计链表 */ = {
+			isa = PBXGroup;
+			children = (
+				F631B724230D373A00DE39DD /* main.c */,
+			);
+			path = "707. 设计链表";
+			sourceTree = "<group>";
+		};
 		F66B5E7F230BC83100826C1A /* 148. 排序链表 */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +345,10 @@
 				F6F67655230A80500015AFD1 /* PublicTool */,
 				F631B6FC230CE20D00DE39DD /* 链表 */,
 				F66B5E8B230BDA4100826C1A /* 20. 有效的括号 */,
+				F631B702230CE2CC00DE39DD /* 856. 括号的分数 */,
+				F631B70D230CEE6000DE39DD /* 150. 逆波兰表达式求值 */,
+				F631B718230D126C00DE39DD /* 224. 基本计算器 */,
+				F631B723230D373A00DE39DD /* 707. 设计链表 */,
 				F6F67635230A40A60015AFD1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -253,6 +365,10 @@
 				F6F67683230AA55E0015AFD1 /* 876. 链表的中间结点 */,
 				F66B5E7E230BC83100826C1A /* 148. 排序链表 */,
 				F66B5E8A230BDA4100826C1A /* 20. 有效的括号 */,
+				F631B701230CE2CC00DE39DD /* 856. 括号的分数 */,
+				F631B70C230CEE6000DE39DD /* 150. 逆波兰表达式求值 */,
+				F631B717230D126C00DE39DD /* 224. 基本计算器 */,
+				F631B722230D373A00DE39DD /* 707. 设计链表 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -325,6 +441,74 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F631B700230CE2CC00DE39DD /* 856. 括号的分数 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F631B705230CE2CC00DE39DD /* Build configuration list for PBXNativeTarget "856. 括号的分数" */;
+			buildPhases = (
+				F631B6FD230CE2CC00DE39DD /* Sources */,
+				F631B6FE230CE2CC00DE39DD /* Frameworks */,
+				F631B6FF230CE2CC00DE39DD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "856. 括号的分数";
+			productName = "856. 括号的分数";
+			productReference = F631B701230CE2CC00DE39DD /* 856. 括号的分数 */;
+			productType = "com.apple.product-type.tool";
+		};
+		F631B70B230CEE6000DE39DD /* 150. 逆波兰表达式求值 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F631B710230CEE6000DE39DD /* Build configuration list for PBXNativeTarget "150. 逆波兰表达式求值" */;
+			buildPhases = (
+				F631B708230CEE6000DE39DD /* Sources */,
+				F631B709230CEE6000DE39DD /* Frameworks */,
+				F631B70A230CEE6000DE39DD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "150. 逆波兰表达式求值";
+			productName = "150. 逆波兰表达式求值";
+			productReference = F631B70C230CEE6000DE39DD /* 150. 逆波兰表达式求值 */;
+			productType = "com.apple.product-type.tool";
+		};
+		F631B716230D126C00DE39DD /* 224. 基本计算器 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F631B71B230D126C00DE39DD /* Build configuration list for PBXNativeTarget "224. 基本计算器" */;
+			buildPhases = (
+				F631B713230D126C00DE39DD /* Sources */,
+				F631B714230D126C00DE39DD /* Frameworks */,
+				F631B715230D126C00DE39DD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "224. 基本计算器";
+			productName = "224. 基本计算器";
+			productReference = F631B717230D126C00DE39DD /* 224. 基本计算器 */;
+			productType = "com.apple.product-type.tool";
+		};
+		F631B721230D373A00DE39DD /* 707. 设计链表 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F631B726230D373A00DE39DD /* Build configuration list for PBXNativeTarget "707. 设计链表" */;
+			buildPhases = (
+				F631B71E230D373A00DE39DD /* Sources */,
+				F631B71F230D373A00DE39DD /* Frameworks */,
+				F631B720230D373A00DE39DD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "707. 设计链表";
+			productName = "707. 设计链表";
+			productReference = F631B722230D373A00DE39DD /* 707. 设计链表 */;
+			productType = "com.apple.product-type.tool";
+		};
 		F66B5E7D230BC83100826C1A /* 148. 排序链表 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F66B5E84230BC83100826C1A /* Build configuration list for PBXNativeTarget "148. 排序链表" */;
@@ -487,6 +671,18 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = chenfanfang;
 				TargetAttributes = {
+					F631B700230CE2CC00DE39DD = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					F631B70B230CEE6000DE39DD = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					F631B716230D126C00DE39DD = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					F631B721230D373A00DE39DD = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					F66B5E7D230BC83100826C1A = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -537,11 +733,47 @@
 				F6F67682230AA55E0015AFD1 /* 876. 链表的中间结点 */,
 				F66B5E7D230BC83100826C1A /* 148. 排序链表 */,
 				F66B5E89230BDA4100826C1A /* 20. 有效的括号 */,
+				F631B700230CE2CC00DE39DD /* 856. 括号的分数 */,
+				F631B70B230CEE6000DE39DD /* 150. 逆波兰表达式求值 */,
+				F631B716230D126C00DE39DD /* 224. 基本计算器 */,
+				F631B721230D373A00DE39DD /* 707. 设计链表 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F631B6FD230CE2CC00DE39DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F631B704230CE2CC00DE39DD /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F631B708230CEE6000DE39DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F631B70F230CEE6000DE39DD /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F631B713230D126C00DE39DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F631B71A230D126C00DE39DD /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F631B71E230D373A00DE39DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F631B725230D373A00DE39DD /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F66B5E7A230BC83100826C1A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -625,6 +857,78 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		F631B706230CE2CC00DE39DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58B485HG52;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F631B707230CE2CC00DE39DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58B485HG52;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F631B711230CEE6000DE39DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58B485HG52;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F631B712230CEE6000DE39DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58B485HG52;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F631B71C230D126C00DE39DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58B485HG52;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F631B71D230D126C00DE39DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58B485HG52;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F631B727230D373A00DE39DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58B485HG52;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F631B728230D373A00DE39DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58B485HG52;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		F66B5E82230BC83100826C1A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -901,6 +1205,42 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F631B705230CE2CC00DE39DD /* Build configuration list for PBXNativeTarget "856. 括号的分数" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F631B706230CE2CC00DE39DD /* Debug */,
+				F631B707230CE2CC00DE39DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F631B710230CEE6000DE39DD /* Build configuration list for PBXNativeTarget "150. 逆波兰表达式求值" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F631B711230CEE6000DE39DD /* Debug */,
+				F631B712230CEE6000DE39DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F631B71B230D126C00DE39DD /* Build configuration list for PBXNativeTarget "224. 基本计算器" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F631B71C230D126C00DE39DD /* Debug */,
+				F631B71D230D126C00DE39DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F631B726230D373A00DE39DD /* Build configuration list for PBXNativeTarget "707. 设计链表" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F631B727230D373A00DE39DD /* Debug */,
+				F631B728230D373A00DE39DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F66B5E84230BC83100826C1A /* Build configuration list for PBXNativeTarget "148. 排序链表" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
