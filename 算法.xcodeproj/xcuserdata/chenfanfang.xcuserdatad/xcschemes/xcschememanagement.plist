@@ -7,67 +7,79 @@
 		<key>141. 环形链表.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>4</integer>
 		</dict>
 		<key>148. 排序链表.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>8</integer>
 		</dict>
 		<key>150. 逆波兰表达式求值.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>9</integer>
 		</dict>
 		<key>20. 有效的括号.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>10</integer>
 		</dict>
 		<key>203. 移除链表元素.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 		<key>206. 反转链表.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>224. 基本计算器.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>12</integer>
+		</dict>
+		<key>225. 用队列实现栈.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
 		<key>237. 删除链表中的节点.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>707. 设计链表.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>13</integer>
 		</dict>
 		<key>83. 删除排序链表中的重复元素.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
 		<key>856. 括号的分数.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>11</integer>
 		</dict>
 		<key>876. 链表的中间结点.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>7</integer>
+		</dict>
+		<key>94. 二叉树的中序遍历.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>14</integer>
 		</dict>
 		<key>算法.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 </dict>
