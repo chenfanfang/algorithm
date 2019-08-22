@@ -48,126 +48,129 @@
 
 
 
-typedef struct Node {
-    struct Node *next;
+typedef struct Node{
     int val;
-}Node;
+    struct Node *next;
+} Node;
 
 typedef struct {
     Node *head;
-    
 } MyLinkedList;
 
-
-////创建链表
+/* *Initialize your data structure here. */
 MyLinkedList *myLinkedListCreate() {
-    MyLinkedList *list = (MyLinkedList *)malloc(sizeof(MyLinkedList));
-    list->head = NULL;
-    return list;
+    MyLinkedList *ret = (MyLinkedList*)malloc(sizeof(MyLinkedList));
+    ret->head = NULL;
+    
+    return ret;
 }
 
+/* *Get the value of the index-th node in the linked list. If the index is invalid, return -1. */
+int Getsize(MyLinkedList *obj) {//获得链表长度
+    int count = 0;
+    Node *cur = obj->head;
+    while (cur != NULL)
+    {
+        count++;
+        cur = cur->next;
+    }
+    return count;
+}
+
+int myLinkedListGet(MyLinkedList *obj, int index) {
+    if(index < 0) return -1;
+    Node *cur = obj->head;
+    while(cur) {
+        
+        if(index == 0) return cur->val;
+        cur = cur->next;
+        index--;
+    }
+    return -1;
+}
+
+/* *Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list. */
 Node *createNode(int val) {
-    Node *node = (Node *)malloc(sizeof(Node));
-    //printf("sizeof:%d\n\n",sizeof(struct Node *));
-    node->val = val;
-    node->next = NULL;
-    return node;
+    
+    Node *pnode = (Node*)malloc(sizeof(Node));
+    pnode->val = val;
+    pnode->next = NULL;
+    return pnode;
+}
+void myLinkedListAddAtHead(MyLinkedList *obj, int val) {
+    Node *newnode = createNode(val);
+    newnode->next = obj->head;
+    obj->head = newnode;
 }
 
-/** Get the value of the index-th node in the linked list. If the index is invalid, return -1. */
-int myLinkedListGet(MyLinkedList* obj, int index) {
-    if (index < 0) {
-        return -1;
+/* *Append a node of value val to the last element of the linked list. */
+void myLinkedListAddAtTail(MyLinkedList *obj, int val) {
+    Node *tail = obj->head;
+    Node *newnode = createNode(val);
+    //先判断首个节点是否为null
+    if (tail == NULL) {
+        obj->head = newnode;
+        return;
     }
-    Node *node = obj->head;
-    for (int i = 1; i <= index; i++) {
-        node = node->next;
-        if (obj == NULL) {
-            return -1;
+    
+    while (tail->next != NULL) {
+        
+        tail = tail->next;
+    }
+    tail->next = newnode;
+}
+
+/* *Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted. */
+void myLinkedListAddAtIndex(MyLinkedList *obj, int index, int val) {
+    Node *current_node = obj->head;
+
+    //如果index小于0，则在头部插入节点。
+    if (index <= 0) {
+        myLinkedListAddAtHead(obj, val);
+        return;
+    }
+    
+    while (current_node) {
+        
+        if(index == 1) { //找到上一个node
+            
+            Node *new_node = createNode(val);
+            new_node->next = current_node->next;
+            current_node->next = new_node;
         }
+        index--;
+        current_node = current_node->next;
     }
-    return node != NULL ? node->val : -1;
+    return;
 }
 
-/** Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list. */
-void myLinkedListAddAtHead(MyLinkedList* obj, int val) {
+/* *Delete the index-th node in the linked list, if the index is valid. */
+void myLinkedListDeleteAtIndex(MyLinkedList *obj, int index) {
+    int linklistSize = Getsize(obj);
+    Node *del_node;
+    Node *current_node = obj->head;
+    //若首页元素为null，并且越界，直接return
+    if (index >= linklistSize || index < 0 || current_node == NULL) return;
     
-    Node *new_node = createNode(val);
-    new_node->next = obj->head;
-    obj->head = new_node;
-    
-    
-}
-
-/** Append a node of value val to the last element of the linked list. */
-void myLinkedListAddAtTail(MyLinkedList* obj, int val) {
-    Node *node = obj->head;
-    Node *new_node = createNode(val);
-    if (node == NULL) {
-        obj->head = new_node;
+    //若删除0个元素
+    if (index == 0) {
+        obj->head = current_node->next;
+        free(current_node);
         return;
     }
     
-    while (node->next != NULL) {
-        node = node->next;
+    //找到要删除node的上一个node
+    while (--index) {
+        current_node = current_node->next;
     }
-    node->next = new_node;
+    del_node = current_node->next;
+    current_node->next = del_node->next;
+    free(del_node);
 }
 
-/** Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted. */
-void myLinkedListAddAtIndex(MyLinkedList* obj, int index, int val) {
-    if (index < 0) return;
-    
-    Node *node = obj->head;
-    int index_flag = 0;
-    if (node == NULL) {
-        return;
-    }
-    Node *new_node = createNode(val);
-    if (node->next == NULL) {
-        obj->head = new_node;
-        new_node->next = node;
-        return;
-    }
-    
-    Node *previousNode = NULL;
-    while (index_flag != index) {
-        previousNode = node;
-        index_flag++;
-        node = node->next;
-        if (node == NULL) {
-            return;
-        }
-    }
-    
-    previousNode->next = new_node;
-    new_node->next = node;
-    
-    
-}
-
-/** Delete the index-th node in the linked list, if the index is valid. */
-void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
-    if (index < 0) {
-        return;
-    }
-    Node *node = obj->head;
-    for (int i = 1; i <= index - 1; i++) { //找到要删除node的上一个node
-        node = node->next;
-        if (node == NULL || node->next == NULL) {
-            return;
-        }
-    }
-    
-    //MyLinkedList *delete_index_node = obj->next;
-    //obj->next = delete_index_node->next;
-    
-    node->next = node->next->next;
-    
-}
 
 //释放链表内存
-void myLinkedListFree(MyLinkedList* obj) {
+void myLinkedListFree(MyLinkedList *obj) {
     Node *need_free_node;
     Node *node = obj->head;
     free(obj);
@@ -180,8 +183,9 @@ void myLinkedListFree(MyLinkedList* obj) {
 
 
 
-int main(int argc, const char * argv[]) {
+int main(int argc, const char  *argv[]) {
     
+    /*
     MyLinkedList *linkedList = myLinkedListCreate();
     myLinkedListAddAtHead(linkedList, 1);
     myLinkedListAddAtTail(linkedList, 3);
@@ -189,10 +193,26 @@ int main(int argc, const char * argv[]) {
     printf("%d\n",myLinkedListGet(linkedList, 1));//返回2
     myLinkedListDeleteAtIndex(linkedList, 1);//现在链表是1-> 3
     printf("%d\n",myLinkedListGet(linkedList, 1));//返回3
-    
-    
-    
      myLinkedListFree(linkedList);
+     */
+    
+    /*
+    MyLinkedList *linkedList = myLinkedListCreate();
+    myLinkedListAddAtHead(linkedList, 1);
+    myLinkedListAddAtIndex(linkedList, 1, 2);
+    printf("%d\n",myLinkedListGet(linkedList, 1));
+    printf("%d\n",myLinkedListGet(linkedList, 0));
+    printf("%d\n",myLinkedListGet(linkedList, 2));
+     */
+    
+    
+    MyLinkedList *linkedList = myLinkedListCreate();
+    myLinkedListAddAtHead(linkedList, 1);
+    myLinkedListAddAtTail(linkedList, 3);
+    myLinkedListAddAtIndex(linkedList, 1, 2);
+    printf("%d\n",myLinkedListGet(linkedList, 1));
+    myLinkedListDeleteAtIndex(linkedList, 0);
+    printf("%d\n",myLinkedListGet(linkedList, 0));
     
     return 0;
 }
