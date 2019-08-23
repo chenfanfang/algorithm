@@ -33,19 +33,10 @@ int intValuesSize = 10;
 
 int *intValues;
 
-
-//中序遍历  递归
-void traverse(struct TreeNode *node, int *returnSize){
-    if (node == NULL) {
-        return;
-    }
-    
-    traverse(node->left, returnSize);
-    
-    
-    *returnSize = *returnSize + 1;
+//判断是否需要扩充数组数量
+void judegeIfNeedReSizeArr(int currentSize) {
     //数组容量是否足够，不够，就重新开辟新的空间
-    if (intValuesSize < *returnSize) {
+    if (intValuesSize < currentSize) {
         int oldSize = intValuesSize;
         intValuesSize = intValuesSize * 1.5;
         int *newIntValues = calloc(intValuesSize, sizeof(int));
@@ -55,13 +46,61 @@ void traverse(struct TreeNode *node, int *returnSize){
         free(intValues);
         intValues = newIntValues;
     }
+}
+
+
+void traverse(struct TreeNode *node, int *returnSize){
+    
+    
+    //=====================================================================后序遍历
+  
+     
+    if (node == NULL) {
+        return;
+    }
+     
+    traverse(node->left, returnSize);
+    traverse(node->right, returnSize);
+    
+    *returnSize = *returnSize + 1;
+    judegeIfNeedReSizeArr(*returnSize);
+    intValues[*returnSize - 1] = node->val;
+ 
+    
+    
+    //=====================================================================前序遍历
+    
+    /*
+     
+    if (node == NULL) {
+        return;
+    }
+    *returnSize = *returnSize + 1;
+    judegeIfNeedReSizeArr(*returnSize);
+    intValues[*returnSize - 1] = node->val;
+    
+    traverse(node->left, returnSize);
+    traverse(node->right, returnSize);
+     */
+     
+    
+    //=====================================================================中序遍历
+    /*
+    if (node == NULL) {
+        return;
+    }
+     
+    traverse(node->left, returnSize);
+    
+    *returnSize = *returnSize + 1;
+    judegeIfNeedReSizeArr(*returnSize);
     intValues[*returnSize - 1] = node->val;
     
     traverse(node->right, returnSize);
+     */
 }
 
-//中序遍历
-int *inorderTraversal(struct TreeNode *root, int *returnSize){
+int *traversalMain(struct TreeNode *root, int *returnSize){
     intValues = calloc(intValuesSize, sizeof(int));
     
     int size = 0;
@@ -77,7 +116,7 @@ int main(int argc, const char * argv[]) {
     BinarySearchTree *tree = createBinarySearchTree(intValues, 25);
     TreeNode *rootNode = tree->root;
     int *returnSize = malloc(sizeof(int));
-    int *arr = inorderTraversal(rootNode, returnSize);
+    int *arr = traversalMain(rootNode, returnSize);
     
     printf("\n\n");
     for (int i = 0; i < *returnSize; i++) {
