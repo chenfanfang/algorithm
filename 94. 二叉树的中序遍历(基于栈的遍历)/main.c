@@ -29,12 +29,18 @@
 #include <stdio.h>
 #include "BinarySearchTreeTool.h"
 #include "StackTool.h"
+#include "DynamicArray.h"
 
 
 //解题思路、同递归有点类似。但是使用的辅助工具是栈
 int *inorderTraversal(struct TreeNode* root, int* returnSize){
     TreeNode *node = root;
-    
+    Stack stack = stackCreate();
+    DynamicArray *array = dynamicArrayCreate();
+    stackPush(stack, <#int val#>)
+    while () {
+        <#statements#>
+    }
     
     return NULL;
 }

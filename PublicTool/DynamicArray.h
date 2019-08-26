@@ -13,36 +13,35 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 typedef struct DynamicArray{
     
     unsigned int capacity; //数组的容量，不够可以自动进行扩容
     unsigned int length; //当前数组中拥有数据的个数
-    int *values;
+    unsigned int elementSize; //每个元素的大小
+    void *values;
     
     
 }DynamicArray;
 
-DynamicArray *dynamicArrayCreate(void);
+DynamicArray *dynamicArrayCreate(int elementSize);
 
 int dynamincArrayLength(DynamicArray *array);
 
-int dynamincArrayValueOfIndex(DynamicArray *array, unsigned index);
+void dynamincArrayGetValueOfIndex(DynamicArray *array, unsigned index, void *const data);
 
-int dynamincArrayFirstValue(DynamicArray *array);
+void dynamincArrayGetFirstValue(DynamicArray *array, void *const data);
 
-int dynamincArrayLastValue(DynamicArray *array);
+void dynamincArrayGetLastValue(DynamicArray *array, void *const data);
 
-//返回值代表是否添加成功
-void dynamicArrayAddValue(DynamicArray *array, int value);
+void dynamicArrayAddValue(DynamicArray *array, void *const data);
 
-//返回值代表是否添加成功
-void dynamicArrayAddValueAtIndex(DynamicArray *array, int value, int index);
+void dynamicArrayAddValueAtIndex(DynamicArray *array, int index, void *const data);
 
-//返回值代表是否删除成功
 void dynamicArrayRemoveAtIndex(DynamicArray *array, int index);
 
-//销毁动态数组
+
 void deallocDynamicArray(DynamicArray *array);
 
 

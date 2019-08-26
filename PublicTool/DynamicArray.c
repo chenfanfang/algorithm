@@ -9,6 +9,7 @@
 #include "DynamicArray.h"
 #include <assert.h>
 #include <stdbool.h>
+#include <string.h>
 
 void dynamicArrayJudgeCapacityIsEnough(DynamicArray *array) {
     if (array->length == array->capacity) {
@@ -31,60 +32,81 @@ void dynamicArrayCheckIndex(DynamicArray *array, int index) {
     }
 }
 
-DynamicArray *dynamicArrayCreate() {
+
+DynamicArray *dynamicArrayCreate(int elementSize) {
+    
     DynamicArray *array = calloc(1, sizeof(DynamicArray));
     array->capacity = 10;
     array->length = 0;
-    array->values = calloc(array->capacity, sizeof(int));
+    array->values = calloc(array->capacity, elementSize);
+    array->elementSize = elementSize;
     return array;
 }
+
 
 int dynamincArrayLength(DynamicArray *array) {
     return array->length;
 }
 
-int dynamincArrayValueOfIndex(DynamicArray *array, unsigned index) {
+void dynamincArrayGetValueOfIndex(DynamicArray *array, unsigned index, void *const data) {
     dynamicArrayCheckIndex(array, index);
-    return array->values[index];
+    memcpy(data, array->values + index * array->elementSize, array->elementSize);
 }
 
-int dynamincArrayFirstValue(DynamicArray *array) {
-    return array->values[0];
+
+
+void dynamincArrayGetFirstValue(DynamicArray *array, void *const data) {
+    dynamicArrayAddValueAtIndex(array, 0, data);
 }
 
-int dynamincArrayLastValue(DynamicArray *array) {
-    return array->values[array->length - 1];
-}
 
-void dynamicArrayAddValue(DynamicArray *array, int value) {
+void dynamincArrayGetLastValue(DynamicArray *array, void *const data) {
     
-    dynamicArrayAddValueAtIndex(array, value, array->length);
+    dynamicArrayAddValueAtIndex(array, array->length - 1, data);
+}
+
+
+
+void dynamicArrayAddValue(DynamicArray *array, void *const data) {
+    
+    dynamicArrayAddValueAtIndex(array, array->length, data);
     
 }
 
-void dynamicArrayAddValueAtIndex(DynamicArray *array, int value, int index) {
+
+
+void dynamicArrayAddValueAtIndex(DynamicArray *array, int index, void *const data) {
     
     dynamicArrayJudgeCapacityIsEnough(array);
     
     if (index != array->length) {
-        dynamincArrayValueOfIndex(array, index);
+        dynamicArrayCheckIndex(array, index);
     }
     
     array->length = array->length + 1;
     for (int i = array->length - 1; i > index; i--) {
-        array->values[i] = array->values[i -1];
+        memcpy(array->values + i * array->elementSize, array->values + (i - 1) * array->elementSize, array->elementSize);
     }
     
-    array->values[index] = value;
+    memcpy(array->values + index * array->elementSize, data, array->elementSize);
+    
 }
 
 
 void dynamicArrayRemoveAtIndex(DynamicArray *array, int index) {
-    dynamincArrayValueOfIndex(array, index);
+    
+    
+    dynamicArrayCheckIndex(array, index);
     
     for (int i = index; i < array->length - 1; i++) {
-        array->values[i] = array->values[i + 1];
+        memcpy(array->values + i * array->elementSize, array->values + (i - 1) * array->elementSize, array->elementSize);
     }
     
     array->length = array->length - 1;
+
+}
+
+
+void deallocDynamicArray(DynamicArray *array) {
+    
 }
