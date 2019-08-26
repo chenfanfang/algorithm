@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F61451312313780400846FE3 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F61451302313780400846FE3 /* main.c */; };
+		F61451352313781700846FE3 /* BinarySearchTreeTool.c in Sources */ = {isa = PBXBuildFile; fileRef = F63DD6A2230EAE8100F8F7A2 /* BinarySearchTreeTool.c */; };
+		F614513823137C5100846FE3 /* StackTool.c in Sources */ = {isa = PBXBuildFile; fileRef = F614513723137C5100846FE3 /* StackTool.c */; };
 		F631B704230CE2CC00DE39DD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F631B703230CE2CC00DE39DD /* main.c */; };
 		F631B70F230CEE6000DE39DD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F631B70E230CEE6000DE39DD /* main.c */; };
 		F631B71A230D126C00DE39DD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F631B719230D126C00DE39DD /* main.c */; };
@@ -34,6 +37,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		F614512C2313780400846FE3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		F631B6FF230CE2CC00DE39DD /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,6 +175,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F614512E2313780400846FE3 /* 94. 二叉树的中序遍历(基于栈的遍历) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "94. 二叉树的中序遍历(基于栈的遍历)"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F61451302313780400846FE3 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		F614513623137C5000846FE3 /* StackTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackTool.h; sourceTree = "<group>"; };
+		F614513723137C5100846FE3 /* StackTool.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = StackTool.c; sourceTree = "<group>"; };
 		F631B701230CE2CC00DE39DD /* 856. 括号的分数 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "856. 括号的分数"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F631B703230CE2CC00DE39DD /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F631B70C230CEE6000DE39DD /* 150. 逆波兰表达式求值 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "150. 逆波兰表达式求值"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +214,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F614512B2313780400846FE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F631B6FE230CE2CC00DE39DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,6 +322,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F614512F2313780400846FE3 /* 94. 二叉树的中序遍历(基于栈的遍历) */ = {
+			isa = PBXGroup;
+			children = (
+				F61451302313780400846FE3 /* main.c */,
+			);
+			path = "94. 二叉树的中序遍历(基于栈的遍历)";
+			sourceTree = "<group>";
+		};
 		F631B6FC230CE20D00DE39DD /* 链表 */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +412,7 @@
 				F631B718230D126C00DE39DD /* 224. 基本计算器 */,
 				F631B723230D373A00DE39DD /* 707. 设计链表 */,
 				F63DD69B230EAAE900F8F7A2 /* 94. 二叉树的中序遍历 */,
+				F614512F2313780400846FE3 /* 94. 二叉树的中序遍历(基于栈的遍历) */,
 				F6F67635230A40A60015AFD1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -402,6 +434,7 @@
 				F631B717230D126C00DE39DD /* 224. 基本计算器 */,
 				F631B722230D373A00DE39DD /* 707. 设计链表 */,
 				F63DD69A230EAAE900F8F7A2 /* 94. 二叉树的中序遍历 */,
+				F614512E2313780400846FE3 /* 94. 二叉树的中序遍历(基于栈的遍历) */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -437,6 +470,8 @@
 				F6F67657230A80720015AFD1 /* PublicTool.c */,
 				F63DD6A1230EAE8100F8F7A2 /* BinarySearchTreeTool.h */,
 				F63DD6A2230EAE8100F8F7A2 /* BinarySearchTreeTool.c */,
+				F614513623137C5000846FE3 /* StackTool.h */,
+				F614513723137C5100846FE3 /* StackTool.c */,
 			);
 			path = PublicTool;
 			sourceTree = "<group>";
@@ -476,6 +511,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F614512D2313780400846FE3 /* 94. 二叉树的中序遍历(基于栈的遍历) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F61451342313780400846FE3 /* Build configuration list for PBXNativeTarget "94. 二叉树的中序遍历(基于栈的遍历)" */;
+			buildPhases = (
+				F614512A2313780400846FE3 /* Sources */,
+				F614512B2313780400846FE3 /* Frameworks */,
+				F614512C2313780400846FE3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "94. 二叉树的中序遍历(基于栈的遍历)";
+			productName = "94. 二叉树的中序遍历(基于栈的遍历)";
+			productReference = F614512E2313780400846FE3 /* 94. 二叉树的中序遍历(基于栈的遍历) */;
+			productType = "com.apple.product-type.tool";
+		};
 		F631B700230CE2CC00DE39DD /* 856. 括号的分数 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F631B705230CE2CC00DE39DD /* Build configuration list for PBXNativeTarget "856. 括号的分数" */;
@@ -723,6 +775,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = chenfanfang;
 				TargetAttributes = {
+					F614512D2313780400846FE3 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					F631B700230CE2CC00DE39DD = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -793,11 +848,21 @@
 				F631B716230D126C00DE39DD /* 224. 基本计算器 */,
 				F631B721230D373A00DE39DD /* 707. 设计链表 */,
 				F63DD699230EAAE900F8F7A2 /* 94. 二叉树的中序遍历 */,
+				F614512D2313780400846FE3 /* 94. 二叉树的中序遍历(基于栈的遍历) */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F614512A2313780400846FE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F61451352313781700846FE3 /* BinarySearchTreeTool.c in Sources */,
+				F61451312313780400846FE3 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F631B6FD230CE2CC00DE39DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -860,6 +925,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F614513823137C5100846FE3 /* StackTool.c in Sources */,
 				F63DD6A3230EAE8100F8F7A2 /* BinarySearchTreeTool.c in Sources */,
 				F6F67658230A80720015AFD1 /* PublicTool.c in Sources */,
 				F6F67638230A40A60015AFD1 /* main.c in Sources */,
@@ -923,6 +989,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		F61451322313780400846FE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58B485HG52;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F61451332313780400846FE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 58B485HG52;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		F631B706230CE2CC00DE39DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1289,6 +1373,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F61451342313780400846FE3 /* Build configuration list for PBXNativeTarget "94. 二叉树的中序遍历(基于栈的遍历)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F61451322313780400846FE3 /* Debug */,
+				F61451332313780400846FE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F631B705230CE2CC00DE39DD /* Build configuration list for PBXNativeTarget "856. 括号的分数" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
