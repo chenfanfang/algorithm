@@ -14,31 +14,33 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 
 typedef struct StackNode{
-    unsigned int data; //模拟的数据必须>=0
+    void *data; //模拟的数据必须>=0
     struct StackNode *next;
 } StackNode;
 
 typedef struct Stack {
-    int size;
+    int length; //栈中有多少个元素
+    size_t dataSize; //StackNode中的data的 size  (sizeof)
     StackNode *top; //栈顶
     
-} Stack;
+} Stack; 
 //创建栈
-Stack *stackCreate();
+Stack *stackCreate(size_t dataSize);
 //清空栈
 void stackRemodeAll(Stack *stack);
 //销毁栈
 void stackDestory(Stack *stack);
 //判空
-int stackIsEmpty(Stack *stack);
+bool stackIsEmpty(Stack *stack);
 //入栈
-int stackPush(Stack *stack, int val);
-//出栈 （若出栈错误，则返回-1）
-int stackPop(Stack *stack);
-//取栈顶元素 （若取栈顶元素错误，则返回-1）
-int GetTopElement(Stack *stack);
+void stackPush(Stack *stack, void *const value);
+//出栈 
+void *stackPop(Stack *stack);
+//取栈顶元素
+void *getTopElement(Stack *stack);
 
 #endif /* StackTool_h */

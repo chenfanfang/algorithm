@@ -8,15 +8,18 @@
 
 #include "StackTool.h"
 
+#include <assert.h>
+
 void freeNode(struct StackNode *node) {
     free(node);
 }
 
 //创建栈
-Stack *stackCreate() {
+Stack *stackCreate(size_t dataSize) {
     Stack *stack = calloc(1, sizeof(Stack));
     stack->top = NULL;
-    stack->size = 0;
+    stack->length = 0;
+    stack->dataSize = dataSize;
     return stack;
 }
 //清空栈
@@ -29,7 +32,7 @@ void stackRemodeAll(Stack *stack) {
         free(oldTopNode);
     }
     free(oldTopNode);
-    stack->size = 0;
+    stack->length = 0;
     stack->top = NULL;
 }
 //销毁栈
@@ -38,39 +41,41 @@ void stackDestory(Stack *stack) {
     free(stack);
 }
 //判空
-int stackIsEmpty(Stack *stack) {
-    return stack->size == 0;
+bool stackIsEmpty(Stack *stack) {
+    return stack->length == 0;
 }
 //入栈
-int stackPush(Stack *stack, int val) {
-    stack->size = stack->size + 1;
+void stackPush(Stack *stack, void *const value) {
+    
+    stack->length = stack->length + 1;
     StackNode *newNode = calloc(1, sizeof(StackNode));
-    newNode->data = val;
+    newNode->data = value;
     
     newNode->next = stack->top;
     stack->top = newNode;
-    return val;
     
 }
 //出栈 （若出栈错误，则返回-1）
-int stackPop(Stack *stack) {
+void *stackPop(Stack *stack) {
     if (stack->top == NULL) {
-        return -1;
+        printf("栈中没有数据，无法pop");
+        assert(false);
     }
     
     StackNode *topNode = stack->top;
     stack->top = topNode->next;
-    unsigned int data = topNode->data;
+    void *data = topNode->data;
     free(topNode);
     return data;
     
 }
 //取栈顶元素 （若取栈顶元素错误，则返回-1）
-int GetTopElement(Stack *stack) {
+void *getTopElement(Stack *stack) {
     if (stack->top == NULL) {
-        return -1;
+        printf("栈中没有数据，无法获取数据");
+        assert(false);
     }
     
-    unsigned int data = stack->top->data;
+    void *data = stack->top->data;
     return data;
 }

@@ -35,8 +35,8 @@
 //解题思路、同递归有点类似。但是使用的辅助工具是栈
 int *inorderTraversal(struct TreeNode* root, int* returnSize){
     TreeNode *node = root;
-    Stack stack = stackCreate();
-    DynamicArray *array = dynamicArrayCreate();
+    Stack *stack = stackCreate();
+    DynamicArray *array = dynamicArrayCreate(sizeof(int));
     stackPush(stack, <#int val#>)
     while () {
         <#statements#>
