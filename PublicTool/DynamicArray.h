@@ -27,6 +27,8 @@ typedef struct DynamicArray{
 
 DynamicArray *dynamicArrayCreate(int elementSize);
 
+bool dynamicArrayIsEmpty(DynamicArray *array);
+
 int dynamincArrayLength(DynamicArray *array);
 
 void dynamincArrayGetValueOfIndex(DynamicArray *array, unsigned index, void *const data);
@@ -40,7 +42,6 @@ void dynamicArrayAddValue(DynamicArray *array, void *const data);
 void dynamicArrayAddValueAtIndex(DynamicArray *array, int index, void *const data);
 
 void dynamicArrayRemoveAtIndex(DynamicArray *array, int index);
-
 
 void deallocDynamicArray(DynamicArray *array);
 

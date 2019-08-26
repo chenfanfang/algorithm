@@ -44,6 +44,10 @@ DynamicArray *dynamicArrayCreate(int elementSize) {
 }
 
 
+bool dynamicArrayIsEmpty(DynamicArray *array) {
+    return array->length == 0;
+}
+
 int dynamincArrayLength(DynamicArray *array) {
     return array->length;
 }

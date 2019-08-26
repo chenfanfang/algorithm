@@ -12,6 +12,7 @@
 		F614513823137C5100846FE3 /* StackTool.c in Sources */ = {isa = PBXBuildFile; fileRef = F614513723137C5100846FE3 /* StackTool.c */; };
 		F61451392313863D00846FE3 /* StackTool.c in Sources */ = {isa = PBXBuildFile; fileRef = F614513723137C5100846FE3 /* StackTool.c */; };
 		F614513C23138A9000846FE3 /* DynamicArray.c in Sources */ = {isa = PBXBuildFile; fileRef = F614513B23138A9000846FE3 /* DynamicArray.c */; };
+		F61451732313EE5500846FE3 /* DynamicArray.c in Sources */ = {isa = PBXBuildFile; fileRef = F614513B23138A9000846FE3 /* DynamicArray.c */; };
 		F631B704230CE2CC00DE39DD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F631B703230CE2CC00DE39DD /* main.c */; };
 		F631B70F230CEE6000DE39DD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F631B70E230CEE6000DE39DD /* main.c */; };
 		F631B71A230D126C00DE39DD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F631B719230D126C00DE39DD /* main.c */; };
@@ -867,6 +868,7 @@
 				F61451352313781700846FE3 /* BinarySearchTreeTool.c in Sources */,
 				F61451392313863D00846FE3 /* StackTool.c in Sources */,
 				F61451312313780400846FE3 /* main.c in Sources */,
+				F61451732313EE5500846FE3 /* DynamicArray.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

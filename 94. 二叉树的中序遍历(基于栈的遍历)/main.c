@@ -34,15 +34,38 @@
 
 //解题思路、同递归有点类似。但是使用的辅助工具是栈
 int *inorderTraversal(struct TreeNode* root, int* returnSize){
-    TreeNode *node = root;
-    Stack *stack = stackCreate();
+    TreeNode *currentNode = root;
+    Stack *stack = stackCreate(sizeof(TreeNode));
     DynamicArray *array = dynamicArrayCreate(sizeof(int));
-    stackPush(stack, <#int val#>)
-    while () {
-        <#statements#>
+    stackPush(stack, currentNode);
+    while (currentNode != NULL || dynamicArrayIsEmpty(array) == false) {
+        while (currentNode != NULL && currentNode->left != NULL) {
+            stackPush(stack, currentNode);
+            currentNode = currentNode->left;
+        }
+        
+        currentNode = stackPop(stack);
+        dynamicArrayAddValue(array, &(currentNode->val));
+        TreeNode *oldNode = currentNode;
+        currentNode = currentNode->right;
+//        if (oldNode != NULL) {
+//            free(oldNode);
+//        }
+        
+//        free(oldNode);
+        
     }
     
-    return NULL;
+    *returnSize = dynamincArrayLength(array);
+    size_t size = sizeof(int);
+    int *arr = calloc(*returnSize, size);
+    for (int i = 0; i < *returnSize; i++) {
+        int *value = calloc(1, size);
+        dynamincArrayGetValueOfIndex(array, i, value);
+        arr[i] = *value;
+    }
+    
+    return arr;
 }
 
 int main(int argc, const char * argv[]) {
