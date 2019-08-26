@@ -10,6 +10,8 @@
 		F61451312313780400846FE3 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F61451302313780400846FE3 /* main.c */; };
 		F61451352313781700846FE3 /* BinarySearchTreeTool.c in Sources */ = {isa = PBXBuildFile; fileRef = F63DD6A2230EAE8100F8F7A2 /* BinarySearchTreeTool.c */; };
 		F614513823137C5100846FE3 /* StackTool.c in Sources */ = {isa = PBXBuildFile; fileRef = F614513723137C5100846FE3 /* StackTool.c */; };
+		F61451392313863D00846FE3 /* StackTool.c in Sources */ = {isa = PBXBuildFile; fileRef = F614513723137C5100846FE3 /* StackTool.c */; };
+		F614513C23138A9000846FE3 /* DynamicArray.c in Sources */ = {isa = PBXBuildFile; fileRef = F614513B23138A9000846FE3 /* DynamicArray.c */; };
 		F631B704230CE2CC00DE39DD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F631B703230CE2CC00DE39DD /* main.c */; };
 		F631B70F230CEE6000DE39DD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F631B70E230CEE6000DE39DD /* main.c */; };
 		F631B71A230D126C00DE39DD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F631B719230D126C00DE39DD /* main.c */; };
@@ -179,6 +181,8 @@
 		F61451302313780400846FE3 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F614513623137C5000846FE3 /* StackTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackTool.h; sourceTree = "<group>"; };
 		F614513723137C5100846FE3 /* StackTool.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = StackTool.c; sourceTree = "<group>"; };
+		F614513A23138A9000846FE3 /* DynamicArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicArray.h; sourceTree = "<group>"; };
+		F614513B23138A9000846FE3 /* DynamicArray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DynamicArray.c; sourceTree = "<group>"; };
 		F631B701230CE2CC00DE39DD /* 856. 括号的分数 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "856. 括号的分数"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F631B703230CE2CC00DE39DD /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F631B70C230CEE6000DE39DD /* 150. 逆波兰表达式求值 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "150. 逆波兰表达式求值"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -472,6 +476,8 @@
 				F63DD6A2230EAE8100F8F7A2 /* BinarySearchTreeTool.c */,
 				F614513623137C5000846FE3 /* StackTool.h */,
 				F614513723137C5100846FE3 /* StackTool.c */,
+				F614513A23138A9000846FE3 /* DynamicArray.h */,
+				F614513B23138A9000846FE3 /* DynamicArray.c */,
 			);
 			path = PublicTool;
 			sourceTree = "<group>";
@@ -859,6 +865,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F61451352313781700846FE3 /* BinarySearchTreeTool.c in Sources */,
+				F61451392313863D00846FE3 /* StackTool.c in Sources */,
 				F61451312313780400846FE3 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -925,6 +932,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F614513C23138A9000846FE3 /* DynamicArray.c in Sources */,
 				F614513823137C5100846FE3 /* StackTool.c in Sources */,
 				F63DD6A3230EAE8100F8F7A2 /* BinarySearchTreeTool.c in Sources */,
 				F6F67658230A80720015AFD1 /* PublicTool.c in Sources */,

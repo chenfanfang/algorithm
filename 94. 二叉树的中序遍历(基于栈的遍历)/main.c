@@ -28,33 +28,8 @@
 
 #include <stdio.h>
 #include "BinarySearchTreeTool.h"
+#include "StackTool.h"
 
-int *intValues;
-int capacity = 0;
-int indexFlag = 0;
-
-
-//判断栈控件是否足够
-void judgeIntValuesIsCapacityEnouth() {
-    
-    if (capacity == 0) { //初始化
-        capacity = 10;
-        intValues = calloc(capacity, sizeof(int));
-    }
-    
-    int old_capacity = capacity;
-    if (indexFlag >= capacity) {
-        capacity = capacity * 1.5;
-    }
-    int *old_intValues = intValues;
-    intValues = calloc(capacity, sizeof(int));
-    for (int i = 0; i < old_capacity; i++) {
-        intValues[i] = old_intValues[i];
-    }
-    
-    free(old_intValues);
-    
-}
 
 //解题思路、同递归有点类似。但是使用的辅助工具是栈
 int *inorderTraversal(struct TreeNode* root, int* returnSize){
