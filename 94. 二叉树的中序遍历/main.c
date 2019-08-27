@@ -54,7 +54,8 @@ void traverse(struct TreeNode *node, int *returnSize){
     
     //=====================================================================后序遍历
   
-     
+    
+    /*
     if (node == NULL) {
         return;
     }
@@ -65,6 +66,8 @@ void traverse(struct TreeNode *node, int *returnSize){
     *returnSize = *returnSize + 1;
     judegeIfNeedReSizeArr(*returnSize);
     intValues[*returnSize - 1] = node->val;
+     
+     */
  
     
     
@@ -85,7 +88,7 @@ void traverse(struct TreeNode *node, int *returnSize){
      
     
     //=====================================================================中序遍历
-    /*
+    
     if (node == NULL) {
         return;
     }
@@ -97,7 +100,7 @@ void traverse(struct TreeNode *node, int *returnSize){
     intValues[*returnSize - 1] = node->val;
     
     traverse(node->right, returnSize);
-     */
+    
 }
 
 int *traversalMain(struct TreeNode *root, int *returnSize){
@@ -112,8 +115,9 @@ int *traversalMain(struct TreeNode *root, int *returnSize){
 
 
 int main(int argc, const char * argv[]) {
-    int intValues[] = {59, 78, 98, 95, 13, 97, 80, 67, 81, 48, 70, 76, 25, 74, 58, 64, 22, 47, 63, 28, 17, 84, 52, 32, 50};
-    BinarySearchTree *tree = createBinarySearchTree(intValues, 25);
+    //int intValues[] = {59, 78, 98, 95, 13, 97, 80, 67, 81, 48, 70, 76, 25, 74, 58, 64, 22, 47, 63, 28, 17, 84, 52, 32, 50};
+    int intValues[] = {34, 56, 29, 16, 18, 42, 3, 55, 19};
+    BinarySearchTree *tree = createBinarySearchTree(intValues, 9);
     TreeNode *rootNode = tree->root;
     int *returnSize = malloc(sizeof(int));
     int *arr = traversalMain(rootNode, returnSize);

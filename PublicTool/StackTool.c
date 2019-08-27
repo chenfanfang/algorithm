@@ -23,7 +23,7 @@ Stack *stackCreate(size_t dataSize) {
     return stack;
 }
 //清空栈
-void stackRemodeAll(Stack *stack) {
+void stackRemoveAll(Stack *stack) {
     struct StackNode *topNode = stack->top;
     struct StackNode *oldTopNode  = topNode;
     while (topNode != NULL) {
@@ -37,7 +37,7 @@ void stackRemodeAll(Stack *stack) {
 }
 //销毁栈
 void stackDestory(Stack *stack) {
-    stackRemodeAll(stack);
+    stackRemoveAll(stack);
     free(stack);
 }
 //判空
@@ -55,10 +55,10 @@ void stackPush(Stack *stack, void *const value) {
     stack->top = newNode;
     
 }
-//出栈 （若出栈错误，则返回-1）
+//出栈
 void *stackPop(Stack *stack) {
     if (stack->top == NULL) {
-        printf("栈中没有数据，无法pop");
+        printf("栈中没有数据，无法pop\n\n");
         assert(false);
     }
     
@@ -66,13 +66,14 @@ void *stackPop(Stack *stack) {
     stack->top = topNode->next;
     void *data = topNode->data;
     free(topNode);
+    stack->length = stack->length - 1;
     return data;
     
 }
-//取栈顶元素 （若取栈顶元素错误，则返回-1）
+//取栈顶元素
 void *getTopElement(Stack *stack) {
     if (stack->top == NULL) {
-        printf("栈中没有数据，无法获取数据");
+        printf("栈中没有数据，无法获取数据\n\n");
         assert(false);
     }
     

@@ -31,7 +31,7 @@ typedef struct Stack {
 //创建栈
 Stack *stackCreate(size_t dataSize);
 //清空栈
-void stackRemodeAll(Stack *stack);
+void stackRemoveAll(Stack *stack);
 //销毁栈
 void stackDestory(Stack *stack);
 //判空

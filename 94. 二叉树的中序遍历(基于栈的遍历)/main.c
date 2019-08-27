@@ -37,22 +37,16 @@ int *inorderTraversal(struct TreeNode* root, int* returnSize){
     TreeNode *currentNode = root;
     Stack *stack = stackCreate(sizeof(TreeNode));
     DynamicArray *array = dynamicArrayCreate(sizeof(int));
-    stackPush(stack, currentNode);
-    while (currentNode != NULL || dynamicArrayIsEmpty(array) == false) {
-        while (currentNode != NULL && currentNode->left != NULL) {
+    while (currentNode != NULL || stackIsEmpty(stack) == false) {
+        
+        while (currentNode != NULL) {
             stackPush(stack, currentNode);
             currentNode = currentNode->left;
         }
         
         currentNode = stackPop(stack);
         dynamicArrayAddValue(array, &(currentNode->val));
-        TreeNode *oldNode = currentNode;
         currentNode = currentNode->right;
-//        if (oldNode != NULL) {
-//            free(oldNode);
-//        }
-        
-//        free(oldNode);
         
     }
     
@@ -78,5 +72,6 @@ int main(int argc, const char * argv[]) {
     for (int i = 0; i < returnSize; i++) {
         printf("%d  ",arr[i]);
     }
+    printf("\n\n");
     return 0;
 }
